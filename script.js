@@ -1,15 +1,24 @@
-const getText = function () {
-  const textBox = document.querySelector("input").value;
-  return textBox;
+function getText(textField) {
+  return textField.value;
+}
+
+function createElement(tag) {
+  return document.createElement(tag);
+}
+
+const addText = (text) => {
+  return (createElement("div").innerHtml = text);
 };
 
-const appendText = function (text) {
-  const todoList = document.querySelector("#ul-container");
-  todoList.appendChild(text);
-};
+function appendElement(element, container) {
+  container.append(element, button, breakLine);
+}
 
-const buttonClick = document
-  .querySelector("#text-button")
-  .addEventListener("click", () => {
-    console.log(getText.textBox);
-  });
+const textField = document.querySelector("#input-text-field");
+const inputButton = document.querySelector("#input-button");
+const container = document.querySelector("#ul-container");
+
+inputButton.addEventListener("click", () => {
+  appendElement(addText(getText(textField)), container);
+  appendElement("button");
+});
