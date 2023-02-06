@@ -1,32 +1,32 @@
 const TODO = {
-  init: function(button) {
+  init: function (button) {
     document.addEventListener("DOMContentLoaded", () => button.onClick);
   },
 
-  onClick: () => {
-    return button.addEventListener("click", TODO.getText);
+  onClick: function () {
+    return button.addEventListener("click", TODO.appendElement);
   },
 
-  getText: function(text) {
+  getText: function (text) {
     return text.value;
   },
 
-  createElement: function() {
-    document.createElement("div");
+  createElement: function () {
+    return document.createElement("div");
   },
 
-  addText: function() {
+  addText: function () {
     return (TODO.createElement.append("span").textContent = TODO.getText);
   },
 
-  finalEl: (container) => {
-    container.appendChild(
-      
-    )
+  finalEl: function () {
+    const newDiv = TODO.createElement();
+    const divWithText = newDiv.append(TODO.addText);
+    return divWithText;
   },
 
   appendElement: function (container) {
-    container.appendChild((TODO.addText.innerHtml = text));
+    container.appendChild(TODO.finalEl);
   },
 };
 
@@ -35,4 +35,3 @@ const inputButton = document.querySelector("#input-button");
 const container = document.querySelector("#ul-container");
 
 TODO.init(inputButton);
-TODO.get;
