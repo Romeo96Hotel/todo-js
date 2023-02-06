@@ -1,24 +1,38 @@
-function getText(textField) {
-  return textField.value;
-}
+const TODO = {
+  init: function(button) {
+    document.addEventListener("DOMContentLoaded", () => button.onClick);
+  },
 
-function createElement(tag) {
-  return document.createElement(tag);
-}
+  onClick: () => {
+    return button.addEventListener("click", TODO.getText);
+  },
 
-const addText = (text) => {
-  return (createElement("div").innerHtml = text);
+  getText: function(text) {
+    return text.value;
+  },
+
+  createElement: function() {
+    document.createElement("div");
+  },
+
+  addText: function() {
+    return (TODO.createElement.append("span").textContent = TODO.getText);
+  },
+
+  finalEl: (container) => {
+    container.appendChild(
+      
+    )
+  },
+
+  appendElement: function (container) {
+    container.appendChild((TODO.addText.innerHtml = text));
+  },
 };
-
-function appendElement(element, container) {
-  container.append(element, button, breakLine);
-}
 
 const textField = document.querySelector("#input-text-field");
 const inputButton = document.querySelector("#input-button");
 const container = document.querySelector("#ul-container");
 
-inputButton.addEventListener("click", () => {
-  appendElement(addText(getText(textField)), container);
-  appendElement("button");
-});
+TODO.init(inputButton);
+TODO.get;
