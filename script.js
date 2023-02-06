@@ -1,37 +1,42 @@
-const TODO = {
-  init: function (button) {
-    document.addEventListener("DOMContentLoaded", () => button.onClick);
-  },
+/* 
+User types in text to append
+Presses button
+returns div with remove button
+ */
 
-  onClick: function () {
-    return button.addEventListener("click", TODO.appendElement);
-  },
+let todo = (function () {
+  const textField = document.querySelector("#input-text-field");
 
-  getText: function (text) {
-    return text.value;
-  },
+  /* function initilization */
+  const init = function () {
+    const appendButton = document.getElementById("container-button");
+    appendButton.addEventListener("click", () => {
+      container.appendToDiv;
+    });
+  };
 
-  createElement: function () {
-    return document.createElement("div");
-  },
+  /* helper functions */
+  const newDiv = function () {
+    return (div = document.createElement("div"));
+  };
 
-  addText: function () {
-    return (TODO.createElement.append("span").textContent = TODO.getText);
-  },
+  const createSpan = function () {
+    return (document.createElement("span").textContent = textField);
+  };
 
-  finalEl: function () {
-    const newDiv = TODO.createElement();
-    const divWithText = newDiv.append(TODO.addText);
-    return divWithText;
-  },
+  const createRemoveButton = function () {
+    container.removeChild(newDiv);
+  };
 
-  appendElement: function (container) {
-    container.appendChild(TODO.finalEl);
-  },
-};
+  /* final result */
+  const appendToDiv = function () {
+    return Object.freeze(newDiv.append(createSpan, createRemoveButton));
+  };
 
-const textField = document.querySelector("#input-text-field");
-const inputButton = document.querySelector("#input-button");
-const container = document.querySelector("#ul-container");
+  return {
+    name: "todo",
+    init,
+  };
+})();
 
-TODO.init(inputButton);
+console.log(todo);
