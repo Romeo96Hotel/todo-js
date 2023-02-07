@@ -1,7 +1,7 @@
 /* 
 User types in text to append
 Presses button
-returns div with remove button
+returns div with text + remove button
  */
 const textField = document.querySelector("#input-text-field");
 const container = document.getElementById("ul-container");
@@ -11,23 +11,20 @@ const todo = (function (container, text, button) {
   /* function initilization */
   function init() {
     button.addEventListener("click", () => {
-      container.appendChild(createDiv);
+      addListElement();
     });
   }
 
   /* helper functions */
-  const createDiv = document.createElement("div");
 
-  const createParagraph = document.createElement("p");
+  function addListElement() {
+    const div = document.createElement("div");
+    const paragraph = document.createElement("p");
+    const removeButton = document.createElement("button");
+    const getText = document.createTextNode(text.value);
 
-  const createRemoveButton = document.createElement("button");
-
-  const createSpan = document.createElement("span");
-  S;
-
-  const getText = text.value;
-
-  const listElement = function () {};
+    container.appendChild(div);
+  }
 
   /* Returns automatically */
   return {
