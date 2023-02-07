@@ -7,16 +7,22 @@ const textField = document.querySelector("#input-text-field");
 const container = document.getElementById("ul-container");
 const appendButton = document.getElementById("input-button");
 
-const todo = (function (container, text, button) {
+const todo = (function (text, button) {
   /* function initilization */
   function init() {
     button.addEventListener("click", () => {
-      addListElement();
-      addDelButton();
+      getText;
     });
   }
 
   /* helper functions */
+
+  const itemContainer = () => {
+    const newDiv = document.createElement("div");
+    return newDiv.style.
+  };
+  const textDiv = () => document.createElement("div");
+  const buttonDiv = () => document.createElement("div");
 
   function addListElement() {
     const textNode = document.createElement("h3");
@@ -35,4 +41,4 @@ const todo = (function (container, text, button) {
     name: "todo",
     init: init(),
   };
-})(container, textField, appendButton);
+})(textField, appendButton);
