@@ -12,18 +12,22 @@ const todo = (function (container, text, button) {
   function init() {
     button.addEventListener("click", () => {
       addListElement();
+      addDelButton();
     });
   }
 
   /* helper functions */
 
   function addListElement() {
-    const div = document.createElement("div");
-    const paragraph = document.createElement("p");
-    const removeButton = document.createElement("button");
-    const getText = document.createTextNode(text.value);
+    const textNode = document.createElement("h3");
 
-    container.appendChild(div);
+    textNode.textContent = text.value;
+    container.appendChild(textNode);
+  }
+
+  function addDelButton() {
+    const delButton = document.createElement("button");
+    container.append(delButton);
   }
 
   /* Returns automatically */
