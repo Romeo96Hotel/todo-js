@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: aliceblue;
+}
+
+.item-container {
+}
+
+[data-completed="true"] {
+  text-decoration: line-through;
+}
+
